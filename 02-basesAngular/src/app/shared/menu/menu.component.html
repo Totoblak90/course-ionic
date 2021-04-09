@@ -1,0 +1,10 @@
+<!-- Example single danger button -->
+<menu>
+    <a  *ngFor="let ruta of rutas"
+        class="link m-3" 
+        [routerLink]="ruta.path"
+    >
+        {{ruta.name}}
+    </a>
+</menu>
+<hr>
