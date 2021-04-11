@@ -11,18 +11,16 @@ import { Post } from '../../interfaces/post.interfaces';
 })
 export class PostComponent implements OnInit , OnDestroy {
 
-  posts: any;
+  posts!: Post[];
 
   constructor( private postsService: PostService) { }
 
   ngOnInit(): void {
 
-    this.posts = this.postsService.getPosts()
-
-
-      // .subscribe( post => {
-      //   this.posts = post
-      // })
+    this.postsService.getPosts()
+      .subscribe( post => {
+        this.posts = post
+      })
 
   }
 

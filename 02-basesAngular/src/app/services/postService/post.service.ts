@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators'
 
 import { Post } from 'src/app/interfaces/post.interfaces';
@@ -13,7 +14,7 @@ export class PostService {
     private http: HttpClient 
   ) { }
 
-  getPosts() {
+  getPosts(): Observable<Post[]> {
 
     return this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts')
       .pipe(

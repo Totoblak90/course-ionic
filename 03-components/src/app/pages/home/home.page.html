@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Components</ion-title>
+    <app-avatar slot="end"></app-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-buttons>
+
+
+    <ion-list>
+      <ion-item 
+        *ngFor="let button of buttonList"
+        detail
+      >
+
+        <ion-icon 
+          [name]="button.icon" 
+          slot="start"
+          color="primary"
+        ></ion-icon>
+        <ion-button 
+          [routerLink]="button.path"
+        >
+          {{ button.name }}
+        </ion-button>
+
+      </ion-item>
+    </ion-list>
+
+  </ion-buttons>
+
+</ion-content>
