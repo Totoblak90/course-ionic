@@ -15,5 +15,18 @@
 
     <app-avatar slot="end"></app-avatar>
 
+    <ion-buttons
+      *ngIf="heartButtonCondition === true" 
+      slot="start" 
+      slot="secondary"
+    >
+      <ion-button (click)="heartButtonClick()" color="danger">
+        <ion-icon 
+          slot="icon-only" 
+          [name]=" favorito ? 'heart' : 'heart-outline'"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>

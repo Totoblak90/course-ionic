@@ -24,6 +24,31 @@ export class HomePage implements OnInit {
       name: "Chip",
       path: "/chip"
     },
+    {
+      icon: "radio-button-off-outline",
+      name: "Button",
+      path: "/button"
+    },
+    {
+      icon: "card-outline",
+      name: "Cards",
+      path: "/card"
+    },
+    {
+      icon: "checkmark-done-outline",
+      name: "Checkbox",
+      path: "/check"
+    },
+    {
+      icon: "calendar-outline",
+      name: "Date/Time",
+      path: "/date-time"
+    },
+    {
+      icon: "car-outline",
+      name: "Fab",
+      path: "/fab"
+    },
   ]
   constructor() { }
 

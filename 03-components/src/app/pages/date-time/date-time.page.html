@@ -1,0 +1,71 @@
+<app-header
+  title="Date/Time"
+>
+
+</app-header>
+
+  <ion-content>
+
+  <ion-list-header>
+    <ion-label>Birthday information</ion-label>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Date of birth</ion-label>
+    <ion-datetime 
+      display-format="DD.MMM.YYYY"
+      (ionChange)="fechaEstablecida( $event )"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-list-header>
+    <ion-label>Date/Time restrictions</ion-label>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Min and Max</ion-label>
+    <ion-datetime 
+      display-format="DD.MMM.YYYY"
+      min="2015-01-01"
+      max="2025-12-31"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Showing only years</ion-label>
+    <ion-datetime 
+      display-format="YYYY"
+      min="2015"
+      max="2025"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-list-header>
+    <ion-label>Custom Options</ion-label>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Picker Options</ion-label>
+    <ion-datetime 
+      display-format="DD.MMM.YYYY"
+      [pickerOptions]="customPickerOptions"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Custom Year Values</ion-label>
+    <ion-datetime 
+      display-format="DD.MMM.YYYY"
+      [yearValues]="customYearValues"
+    ></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Custom Date Short Names</ion-label>
+    <ion-datetime 
+      display-format="DD.MMM.YYYY"
+      [dayShortNames]="customDayShortNames"
+    ></ion-datetime>
+  </ion-item>
+
+</ion-content>
