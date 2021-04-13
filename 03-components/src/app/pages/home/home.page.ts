@@ -64,6 +64,11 @@ export class HomePage implements OnInit {
       name: "Input Forms",
       path: "/input"
     },
+    {
+      icon: "list-outline",
+      name: "Ion List",
+      path: "/ion-list"
+    },
   ]
   constructor() { }
 

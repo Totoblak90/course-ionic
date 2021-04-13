@@ -52,6 +52,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/input/input.module').then( m => m.InputPageModule)
   },
   {
+    path: 'ion-list',
+    loadChildren: () => import('./pages/ion-list/ion-list.module').then( m => m.IonListPageModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   },
