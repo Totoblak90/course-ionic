@@ -49,6 +49,21 @@ export class HomePage implements OnInit {
       name: "Fab",
       path: "/fab"
     },
+    {
+      icon: "grid-outline",
+      name: "Grid",
+      path: "/grid"
+    },
+    {
+      icon: "infinite-outline",
+      name: "Infinite Scroll",
+      path: "/infinite-scroll"
+    },
+    {
+      icon: "hammer-outline",
+      name: "Input Forms",
+      path: "/input"
+    },
   ]
   constructor() { }
 

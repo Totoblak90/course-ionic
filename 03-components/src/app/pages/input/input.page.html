@@ -1,0 +1,107 @@
+<app-header
+title="Input Forms"
+>
+
+</app-header>
+
+<ion-content>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col 
+            sizeXl="6" sizeLg="6" sizeMd="6" sizeSm="12" sizeXs="12" class="ion-padding"
+          >
+          <form [formGroup]="formulario" (ngSubmit)="onClick()">
+            <h2>Working with inputs</h2>
+            <ion-list>
+              <ion-list-header>
+                <ion-label>Most common type of inputs</ion-label>
+              </ion-list-header>
+              <ion-item>
+                <ion-label position="stacked">Text</ion-label>
+                <ion-input type="text"  placeholder="Enter Input" formControlName="text"></ion-input>
+              </ion-item>  
+              <ion-item>
+                <ion-label position="stacked">Number</ion-label>
+                <ion-input type="number"  placeholder="Enter Input" formControlName="number"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Email</ion-label>
+                <ion-input type="email"  placeholder="Enter Input" formControlName="email"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Password</ion-label>
+                <ion-input type="password"  placeholder="Enter Input" formControlName="password"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Url</ion-label>
+                <ion-input type="url"  placeholder="Enter Input" formControlName="url"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Date</ion-label>
+                <ion-input type="date"  placeholder="Enter Input" formControlName="date"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Tel</ion-label>
+                <ion-input type="tel"  placeholder="Enter Input" formControlName="tel"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-button type="submit" expand="block" shape="round">
+                  Click me
+                </ion-button>
+              </ion-item>
+            </ion-list>
+          </form>
+          </ion-col>
+          <ion-col 
+            sizeXl="6" sizeLg="6" sizeMd="6" sizeSm="12" sizeXs="12" class="ion-padding"
+          >
+            
+            <h2>Input examples</h2>
+
+            <h3> Default Input </h3>
+            <ion-input></ion-input>
+
+            <h3> Input with value </h3>
+            <ion-input value="custom"></ion-input>
+
+            <h3> Input with placeholder </h3>
+            <ion-input  placeholder="Enter Input"></ion-input>
+
+            <h3> Input with clear button when there is a value </h3>
+            <ion-input clearInput value="clear me"></ion-input>
+
+            <h3> Number type input </h3>
+            <ion-input type="number" value="333"></ion-input>
+
+            <h3> Disabled input </h3>
+            <ion-input value="Disabled" disabled></ion-input>
+
+            <h3> Readonly input </h3>
+            <ion-input value="Readonly" readonly></ion-input>
+
+            <h3> Inputs with labels </h3>
+            <ion-item>
+              <ion-label>Default Label</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Floating Label</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="fixed">Fixed Label</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">Stacked Label</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+</ion-content>

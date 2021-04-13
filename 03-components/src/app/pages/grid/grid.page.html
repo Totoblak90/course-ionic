@@ -1,0 +1,31 @@
+<app-header
+  title="Grid"
+>
+
+</app-header>
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col 
+        size="12" size-xl="3" size-lg="3" size-md="4" size-sm="6"
+        *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1]"
+      >
+
+        <ion-card>
+          <ion-img src="../../../assets/hjaponslidercasaluznocturna.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+            <ion-card-title>Awesome Title</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eius dignissimos quisquam iste nihil fuga commodi, quidem nam? Vel veniam saepe fuga! Dignissimos iste, voluptatibus laborum rerum cupiditate a quos pariatur sunt!
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
