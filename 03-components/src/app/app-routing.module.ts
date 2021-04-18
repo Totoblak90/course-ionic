@@ -56,9 +56,19 @@ const routes: Routes = [
     loadChildren: () => import('./pages/ion-list/ion-list.module').then( m => m.IonListPageModule)
   },
   {
+    path: 'reorder-list',
+    loadChildren: () => import('./pages/reorder-list/reorder-list.module').then( m => m.ReorderListPageModule)
+  },
+  {
+    path: 'loading',
+    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   },
+
+
 ];
 
 @NgModule({

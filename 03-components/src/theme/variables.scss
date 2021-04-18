@@ -173,3 +173,6 @@
   --ion-color-shade: var(--ion-color-github-shade) !important;
   --ion-color-tint: var(--ion-color-github-tint) !important;
 }
+ ion-item {
+   --background: transparent;
+ }

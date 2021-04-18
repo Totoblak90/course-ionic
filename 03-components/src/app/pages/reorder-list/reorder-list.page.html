@@ -1,0 +1,64 @@
+<app-header
+  title="List - Reorder"
+>
+
+</app-header>
+
+<ion-content>
+
+  <ion-list>
+
+    
+    <ion-list-header>
+      <ion-label class="ion-margin"> <h2><strong>Justice League</strong></h2> </ion-label>
+    </ion-list-header>
+
+    <ion-reorder-group (ionItemReorder)="doReorderJL($event)" [disabled]="JLDisabled">
+
+
+        <ion-item *ngFor="let superheroe of justiceLeague">
+          <ion-label>
+            {{ superheroe }}
+          </ion-label>
+          <ion-reorder slot="end">
+            <ion-icon 
+              *ngIf="JLDisabled"
+              name="reorder-three-outline"
+            ></ion-icon>
+          </ion-reorder>
+        </ion-item>
+
+    </ion-reorder-group>
+
+    <ion-button (click)="shuffleJL()" expand="block" fill="clear" shape="round">
+      Click me to reorder the JL team!
+    </ion-button>
+
+    <ion-list-header>
+      <ion-label class="ion-margin"> <h2><strong>Avengers</strong></h2> </ion-label>
+    </ion-list-header>
+
+    <ion-reorder-group (ionItemReorder)="doReorderAv($event)" [disabled]="AvDisabled" >
+
+
+        <ion-item *ngFor="let superheroe of avengers">
+          <ion-label>
+            {{ superheroe }}
+          </ion-label>
+          <ion-reorder slot="end">
+            <ion-icon 
+              *ngIf="JLDisabled"
+              name="shuffle-outline"
+            ></ion-icon>
+          </ion-reorder>
+        </ion-item>
+
+    </ion-reorder-group>
+    
+    <ion-button (click)="shuffleAv()" expand="block" fill="clear" shape="round">
+      Click me to reorder the Avengers Team!
+    </ion-button>
+
+  </ion-list>
+
+</ion-content>
