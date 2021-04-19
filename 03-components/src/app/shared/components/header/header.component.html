@@ -28,5 +28,28 @@
       </ion-button>
     </ion-buttons>
 
+    <ion-button
+      slot="end"
+      slot="secondary"
+      (click)="popoverClick( $event )"
+      *ngIf="popoverCondition === true"
+      fill="clear"
+    >
+      <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+    </ion-button>
+
   </ion-toolbar>
+
+  <ion-searchbar
+    *ngIf="searchbar === true"
+    placeholder="Search"
+    animated
+    inputmode="text"
+    (ionChange)="onSearch( $event )"
+    debounce="250"
+    showCancelButton="focus"
+  >
+
+  </ion-searchbar>
+
 </ion-header>

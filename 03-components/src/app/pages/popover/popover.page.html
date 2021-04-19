@@ -1,0 +1,17 @@
+<app-header
+  title="Popover"
+  [popoverCondition]="true"
+  (presentPop)="openPopover( $event )"
+>
+
+</app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-button (click)="openPopover( $event )" expand="block">
+    Popover
+  </ion-button>
+
+  <h1>Item selected: {{ data }}</h1>
+
+</ion-content>

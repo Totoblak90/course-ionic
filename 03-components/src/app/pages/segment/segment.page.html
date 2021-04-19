@@ -1,0 +1,42 @@
+<app-header
+  title="Segment"
+>
+
+</app-header>
+
+<ion-content>
+
+  <ion-segment
+    slot="fixed"
+    [value]="segmentValues[0]"
+    (ionChange)="segmentChanged($event)"
+  >
+
+    <ion-segment-button
+    *ngFor="let segment of segmentValues"
+      [value]="segment"
+    >
+      <ion-label>{{ segment }}</ion-label>
+    </ion-segment-button>
+
+
+  </ion-segment>
+
+  <ion-list>
+    <ion-item
+      *ngFor="let hero of superheroes | filter:publisher:'publisher'"
+    >
+      <ion-label>
+       <h3>{{ hero.superhero }} <small>{{ hero.alter_ego }}</small></h3>
+       <p>{{ hero.first_appearance }}</p>   
+      </ion-label>
+      <ion-label
+        slot="end"
+        class="ion-text-right"
+      >
+        {{ hero.publisher }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

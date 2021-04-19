@@ -1,0 +1,20 @@
+<app-header
+  title="Searchbar"
+  [searchbar]="true"
+  (onSearchChange)="onSearchValueChange( $event )"
+>
+
+</app-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item
+      class="animate__animated animate__fadeIn"
+      *ngFor="let album of albums | filter:searchValue:'title'"
+    >
+      {{ album.title | titlecase}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

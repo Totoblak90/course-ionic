@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +11,11 @@ export class HeaderComponent implements OnInit {
   @Input() text: string = "";
   @Input() color: string = "primary";
   @Input() heartButtonCondition: boolean = false;
+  @Input() popoverCondition: boolean = false;
+  @Input() searchbar: boolean = false;
+
+  @Output() presentPop: EventEmitter<any> = new EventEmitter()
+  @Output() onSearchChange: EventEmitter<any> = new EventEmitter()
 
   favorito: boolean = false;
 
@@ -21,6 +26,15 @@ export class HeaderComponent implements OnInit {
 
   heartButtonClick() {
     this.favorito = !this.favorito;
+  }
+
+  popoverClick( event) {
+    this.presentPop.emit( event )
+  }
+
+  onSearch( event ) {
+
+    this.onSearchChange.emit( event )
   }
 
 }

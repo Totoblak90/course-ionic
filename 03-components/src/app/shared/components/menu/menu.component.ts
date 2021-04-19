@@ -82,9 +82,34 @@ export class MenuComponent implements OnInit {
       path: "/loading"
     },
     {
-      icon: "bookmarks-outline",
+      icon: "tablet-portrait-outline",
       name: "Modal",
       path: "/modal"
+    },
+    {
+      icon: "phone-portrait-outline",
+      name: "Popover",
+      path: "/popover"
+    },
+    {
+      icon: "code-working-outline",
+      name: "Progress bar and Range",
+      path: "/progress-and-range"
+    },
+    {
+      icon: "arrow-down-circle-outline",
+      name: "Refresher",
+      path: "/refresher"
+    },
+    {
+      icon: "search-outline",
+      name: "Searchbar",
+      path: "/search"
+    },
+    {
+      icon: "copy-outline",
+      name: "Segment",
+      path: "/segment"
     },
   ]
   
