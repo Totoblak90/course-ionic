@@ -81,6 +81,11 @@ export class MenuComponent implements OnInit {
       name: "Ionic Loading",
       path: "/loading"
     },
+    {
+      icon: "bookmarks-outline",
+      name: "Modal",
+      path: "/modal"
+    },
   ]
   
   constructor(

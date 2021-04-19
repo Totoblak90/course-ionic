@@ -1,0 +1,16 @@
+<ion-content class="ion-padding">
+  <h1 >Modal Info</h1>
+
+  <ion-button (click)="closeModal()" expand="block">
+    Close modal
+  </ion-button>
+
+  <h3>Name: <pre>{{ name }}</pre></h3>
+  <h3>Country: <pre>{{ country }}</pre></h3>
+
+  <ion-button (click)="sendCloseModal()" expand="block">
+    Send & Close modal
+  </ion-button>
+
+
+</ion-content>
