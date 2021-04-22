@@ -1,0 +1,23 @@
+<ion-header 
+  [translucent]="true"
+  class="ion-no-border"
+>
+  <ion-toolbar
+    color="dark"
+  >
+    <ion-title>
+      Tobias News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  color="dark"
+  [fullscreen]="true"
+>
+
+  <app-news
+    [getBusinessNews]="businessNews"
+  ></app-news>
+
+</ion-content>
