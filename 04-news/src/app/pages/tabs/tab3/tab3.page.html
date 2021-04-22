@@ -1,16 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
     <ion-title>
-      Tab 3
+      Favourites
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content color="dark">
+
+  <ion-slides
+  [options]="sliderOpts" 
+    *ngIf="saveLocalDataService.news.length === 0"
+  >
+    <ion-slide>
+
+      <h2>Awesome Slide Content</h2>
+
+    </ion-slide>
+  </ion-slides>
+
+  <app-news
+    *ngIf="saveLocalDataService.news.length > 0"
+    [onFavTab]="true"
+    [news]="saveLocalDataService.news"
+  ></app-news>
 
 </ion-content>

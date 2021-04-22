@@ -9,7 +9,8 @@ import { NewsService } from '../../services/news.service';
 })
 export class NewsComponent implements OnInit {
 
-  @Input() getBusinessNews: Article[] = [];
+  @Input() news: Article[] = [];
+  @Input() onFavTab = false;
 
   constructor(
 

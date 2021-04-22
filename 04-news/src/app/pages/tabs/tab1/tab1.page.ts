@@ -9,16 +9,38 @@ import { Article } from '../../../shared/interfaces/news.interface';
 })
 export class Tab1Page implements OnInit{
 
-  businessNews: Article[] = [];
+  topArgNews: Article[] = [];
 
   constructor(
     private newsService: NewsService
   ) {}
 
   ngOnInit(): void {
-    this.newsService.getTopBusinessHeadlines()
-      .subscribe(data => {
-        this.businessNews.push(...data.articles);
-      });
+    this.loadNews();
+  }
+
+  loadInfiniteData( event ) {
+    this.loadNews( event );
+  }
+
+  loadNews( event? ) {
+
+    this.newsService.getTopArgNews()
+    .subscribe(data => {
+
+      if (data.articles.length === 0) {
+        event.target.disabled = true;
+        event.target.complete();
+        return;
+      }
+
+      this.topArgNews.push(...data.articles);
+
+      if ( event ) {
+       event.target.complete();
+      }
+    });
+
+
   }
 }
