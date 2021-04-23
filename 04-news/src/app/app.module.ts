@@ -12,6 +12,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +22,7 @@ import { AppComponent } from './app.component';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
